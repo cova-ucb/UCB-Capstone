@@ -59,14 +59,24 @@ We performed an exploratory data analysis of absenteeism and how it was connecte
   
 * 37.8% of absenteeism cases were found in employees who owned pets. The total number of absenteeism hours for pet owners was 1983 hr. The largest number of hours belonged to the no-pet ownership group (3141 hr)
   
-* 37.8% of absenteeism cases were found in employees who owned pets. The total number of absenteeism hours for pet owners was 1983 hr. The largest number of hours belonged to the no-pet ownership group (3141 hr)
-  
 * 32.2% of absenteeism cases were found in employees with obesity. The total number of absenteeism hours for these employees was 1461 hr
   
 * 31.9% of absenteeism cases were found in employees who were overweight. The total number of absenteeism hours for these employees was 1931 hr.
   
-Following this statistical analysis we proceeded to model absenteeism in an attempt to develop a tool for predicting employee absences. For this purpose we framed the modeling as a binary classification problem that captured the influence of significant absenteeism events, considered as such when the employee absence time was > 4 Hr.  We employed a variety of known classification methods (KNN, Decision Tree, Logistic Regression, SVM, etc) and compared their predictive performance on test data sets. The performance metrics used were accuracy, precision, recall and F1 scores. Hyperparameter searches on the different estimators were carried out in an attempt to optimize performance for accuracy and precision scores. The best performing models were SVM and KNN (details in the analysis notebook attached)
+* 40.4% of absenteeism cases were found in employees who were younger than 35 years old. 38.8% of cases were found in the 35 to 40 years old bracket
+  
+* The largest number of absent hours (1777 hr) were found in the 33-40 year old bracket
+  
+* 43.7% of absenteeism cases were found in employees with a 240 to 250 Workload average a day
+  
+* 61.5% of absentees had a transportation expense between 175 and 280
+  
+* 67.7% of absentees live 25 Km or farther from work. The largest group of absentees (27.9%) live 50+ Km from work
+  
+* 88.9% of absences were in employees with 9 to 18 years of service
+  
+* The largest number of absence hours (3182 hr) were found in the group with 9-14 years of service
 
 
-
+Following this statistical analysis we proceeded to model absenteeism in an attempt to develop a tool for predicting employee absences. For this purpose we framed the modeling as a binary classification problem that captured the influence of significant absenteeism events, considered as such when the employee absence time was > 4 Hr.  We employed a variety of known classification methods (KNN, Decision Tree, Logistic Regression, SVM, Random Forest, Naive Bayes, etc) and compared their predictive performance on test data sets. The performance metrics used were accuracy, precision, recall and F1 scores. Hyperparameter searches on the different estimators were carried out using different methods (GridSearch, RadomizedSearch, BayesianSearch) in an attempt to optimize performance for accuracy, precision and F1 scores. The best performing models were GradientBoost, Random Forest and KNN (details in the presentation attached)
 
